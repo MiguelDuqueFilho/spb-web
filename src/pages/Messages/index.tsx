@@ -1,4 +1,4 @@
-import { LockOpen, TelegramLogo } from 'phosphor-react';
+import { Settings } from '@material-ui/icons';
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -83,7 +83,8 @@ export function Messages() {
                           handleListEventByService(service.GrpServico);
                         }}
                       >
-                        <LockOpen size={24} />
+                        {/* <LockOpen size={24} /> */}
+                        <Settings size={24} />
                         <SpanCount>{service._count?.Eventos}</SpanCount>
                       </Action>
                     </Column>
@@ -110,7 +111,8 @@ export function Messages() {
                       handleGoTOForm(event.CodEvento);
                     }}
                   >
-                    <TelegramLogo size={24} />
+                    {/* <TelegramLogo size={24} /> */}
+                    <Settings size={24} />
                   </Action>
                 </Column>
               </Row>

@@ -1,4 +1,4 @@
-import { TreeStructure } from 'phosphor-react';
+import { Security } from '@material-ui/icons';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import {
@@ -92,7 +92,8 @@ export function Configurations() {
                         <Span>Atualizado</Span>
                       ) : (
                         <>
-                          <TreeStructure />
+                          {/* <TreeStructure /> */}
+                          <Security />
                           <SpanCount>{service._count?.Eventos}</SpanCount>
                         </>
                       )}

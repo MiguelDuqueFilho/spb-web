@@ -1,6 +1,6 @@
+import { Info } from '@material-ui/icons';
 import { ReactNode, MouseEvent, useState } from 'react';
 import { Button, Em, SchemaContainer, Span } from './styles';
-import { Info } from 'phosphor-react';
 
 interface SchemaProps {
   children?: ReactNode;
@@ -30,6 +30,7 @@ export function Schema(props: SchemaProps) {
     <SchemaContainer>
       <div>
         <Button type="button" onClick={handleFieldHelp}>
+          {/* <Info size={20} /> */}
           <Info size={20} />
         </Button>
         <Span>schema</Span>

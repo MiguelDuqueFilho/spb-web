@@ -1,7 +1,8 @@
 import { MouseEvent } from 'react';
-import { Info, XSquare } from 'phosphor-react';
+
 import { Span, Button, DescContainer, ButtonInfo, Label } from './styles';
 import { toast } from 'react-toastify';
+import { Info, SquareFoot } from '@material-ui/icons';
 
 interface FieldLabelProps {
   name: string;
@@ -56,7 +57,8 @@ export function FieldLabel(props: FieldLabelProps) {
                   )
                 }
               >
-                <XSquare size={25} />
+                {/* <XSquare size={25} /> */}
+                <SquareFoot size={25} />
               </ButtonInfo>
             )}
         </DescContainer>

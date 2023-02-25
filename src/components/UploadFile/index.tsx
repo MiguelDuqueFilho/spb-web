@@ -1,4 +1,4 @@
-import { XSquare } from 'phosphor-react';
+import { SquareFoot } from '@material-ui/icons';
 import { ChangeEvent, useState } from 'react';
 import { toast } from 'react-toastify';
 import { api } from '../../services/axios';
@@ -111,7 +111,7 @@ export function UploadFile({ title, listService }: UploadFileProps) {
             onClick={() => setResultLoad(null)}
             title="exclue o resultado"
           >
-            <XSquare size={24} />
+            {/* <SquareFoot size={24} /> */}
           </Button>
         </ResultContainer>
       )}

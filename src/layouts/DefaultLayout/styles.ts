@@ -1,15 +1,25 @@
 import styled from 'styled-components';
 
-export const LayoutContainer = styled.div`
-  max-width: 98vw;
-  min-height: 96vh;
+export const PageContainer = styled.div`
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'Nav Nav'
+    'Sidebar Content';
+  transition: grid-template-columns 0.2s;
+  grid-gap: 0.5rem;
+  /* display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 'Sidebar Content';
+  transition: grid-template-columns 0.2s; */
+`;
 
-  margin: 1rem auto;
-  padding: 1rem 0;
+export const SidebarContainer = styled.div`
+  grid-area: Sidebar;
+`;
 
-  background-color: ${({ theme }) => theme['gray-800']};
-  border-radius: 8px;
-
-  display: flex;
-  flex-direction: column;
+export const OutletContainer = styled.div`
+  grid-area: Content;
 `;

@@ -1,9 +1,12 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const HomeContainer = styled.main`
-  flex: 1;
+  flex: 4;
+`;
+
+export const HomeWidgets = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
+  margin: 20px;
+
+  background: ${({ theme }) => theme['gray-600']};
+`;

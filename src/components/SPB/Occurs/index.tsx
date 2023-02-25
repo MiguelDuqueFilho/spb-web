@@ -1,3 +1,4 @@
+import { PlusOne, SquareFoot } from '@material-ui/icons';
 import React, {
   Children,
   cloneElement,
@@ -7,7 +8,6 @@ import React, {
 } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import { PlusCircle, Square } from 'phosphor-react';
 
 import { Button, ButtonOccursChild, ButtonsGroup, Label } from './styles';
 
@@ -164,12 +164,14 @@ export function Occurs(props: OccursProps) {
       <ButtonsGroup>
         {maxOccurs === 1 && occurs === 0 && (
           <Button type="button" onClick={handlePlus}>
-            <Square size={25} weight="light" />
+            {/* <Square size={25} weight="light" /> */}
+            <SquareFoot size={25} weight="light" />
           </Button>
         )}
         {maxOccurs > 1 && occurs < maxOccurs && (
           <Button type="button" onClick={handlePlus}>
-            <PlusCircle size={25} />
+            {/* <PlusCircle size={25} /> */}
+            <PlusOne size={25} />
           </Button>
         )}
       </ButtonsGroup>

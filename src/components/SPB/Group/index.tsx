@@ -1,4 +1,4 @@
-import { XSquare } from 'phosphor-react';
+import { Settings } from '@material-ui/icons';
 import { ReactNode, useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { Occurs } from '../Occurs';
@@ -53,7 +53,8 @@ function GroupChild(props: GroupChildProps) {
                 )
               }
             >
-              <XSquare size={25} />
+              {/* <XSquare size={25} /> */}
+              <Settings size={25} />
             </ButtonClose>
           )}
         <Label tabIndex={-1}>{props.NomeCampo}</Label>
