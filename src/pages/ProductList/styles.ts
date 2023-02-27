@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { DeleteOutline } from '@material-ui/icons';
+import styled from 'styled-components';
 
 export const TheList = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ export const ListImage = styled.img`
 `;
 
 interface EditButtonProps {
-  primary: boolean;
+  primary?: boolean;
 }
 export const EditButton = styled.button<EditButtonProps>`
   border: none;

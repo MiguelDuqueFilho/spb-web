@@ -1,46 +1,45 @@
-import { DataGrid } from '@material-ui/data-grid';
 import { useState } from 'react';
-
-import { Link } from 'react-router-dom';
-import { userRows } from '../../components/dummyData';
 import {
-  EditButton,
-  ListImage,
-  ListItem,
-  MyDeleteOutline,
   TheList,
+  ListItem,
+  ListImage,
+  EditButton,
+  MyDeleteOutline,
 } from './styles';
 
-export const UserList = () => {
-  const [data, setData] = useState(userRows);
+import { Link } from 'react-router-dom';
+import { productRows } from '../../components/dummyData';
+import { DataGrid } from '@material-ui/data-grid';
 
+export const ProductList = () => {
+  const [data, setData] = useState(productRows);
   const handleDelete = (id: number) => {
     setData(data.filter((item) => item.id !== id));
   };
-
   const columns = [
     { field: 'id', headerName: 'ID', width: 90 },
     {
-      field: 'user',
-      headerName: 'User',
+      field: 'product',
+      headerName: 'Product',
       width: 200,
-      renderCell: (params: any) => (
-        <ListItem>
-          <ListImage src={params.row.avatar} alt="image" />
-          {params.row.username}
-        </ListItem>
-      ),
+      renderCell: (params: any) => {
+        return (
+          <ListItem>
+            <ListImage src={params.row.img} alt="image" />
+            {params.row.name}
+          </ListItem>
+        );
+      },
     },
-
-    { field: 'email', headerName: 'Email', width: 200 },
+    { field: 'stock', headerName: 'Stock', width: 200 },
     {
       field: 'status',
       headerName: 'Status',
       width: 120,
     },
     {
-      field: 'transaction',
-      headerName: 'Transaction Volume',
+      field: 'price',
+      headerName: 'Price',
       width: 160,
     },
     {
@@ -50,8 +49,8 @@ export const UserList = () => {
       renderCell: (params: any) => {
         return (
           <>
-            <Link to={'/user/' + params.row.id}>
-              <EditButton primary>Edit</EditButton>
+            <Link to={'/product/' + params.row.id}>
+              <EditButton>Edit</EditButton>
             </Link>
             <MyDeleteOutline onClick={() => handleDelete(params.row.id)} />
           </>
@@ -62,9 +61,9 @@ export const UserList = () => {
   return (
     <TheList>
       <DataGrid
-        columns={columns}
         rows={data}
         disableSelectionOnClick
+        columns={columns}
         pageSize={10}
         rowsPerPageOptions={[10]}
         checkboxSelection

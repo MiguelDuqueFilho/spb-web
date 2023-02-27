@@ -1,10 +1,12 @@
 import React from 'react';
 
 import { NavLink } from 'react-router-dom';
+
 import {
   MyLineStyle,
   MyPermIdentity,
   MyReceipt,
+  MyStorefront,
   MyTimeline,
   MyWork,
   SidebarContainer,
@@ -48,6 +50,12 @@ const SideBar = () => {
               <SidebarListItem>
                 <MyReceipt />
                 History
+              </SidebarListItem>
+            </NavLink>
+            <NavLink to="/products" title="Products">
+              <SidebarListItem>
+                <MyStorefront />
+                Products
               </SidebarListItem>
             </NavLink>
           </SidebarList>

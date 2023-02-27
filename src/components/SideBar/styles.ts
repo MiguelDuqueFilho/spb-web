@@ -5,7 +5,7 @@ import {
   Timeline,
   // TrendingUp,
   PermIdentity,
-  // Storefront,
+  Storefront,
   // LocalAtm,
   // Assessment,
   // Drafts,
@@ -94,9 +94,9 @@ export const MyTimeline = styled(Timeline)`
 export const MyPermIdentity = styled(PermIdentity)`
   ${sharedStyle}
 `;
-// export const MyStorefront = styled(Storefront)`
-//   ${sharedStyle}
-// `;
+export const MyStorefront = styled(Storefront)`
+  ${sharedStyle}
+`;
 // export const MyAssessment = styled(Assessment)`
 //   ${sharedStyle}
 // `;
