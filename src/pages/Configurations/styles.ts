@@ -11,14 +11,15 @@ export const ConfigurationContainer = styled.main`
 
   h1 {
     font-size: 1.2rem;
-    color: ${({ theme }) => theme['gray-100']};
+    /* color: ${({ theme }) => theme['gray-100']}; */
+    color: ${({ theme }) => theme.colors.gray12};
   }
 `;
 
 export const ConfigurationSection = styled.div`
   flex: 1;
   margin: 0.5rem;
-  background: ${({ theme }) => theme['gray-700']};
+  background: ${({ theme }) => theme.colors.gray2};
   border-radius: 8px;
   padding: 0.5rem;
   width: 100%;
@@ -29,13 +30,13 @@ export const ConfigurationSection = styled.div`
     margin: 0 0.5rem;
     padding: 1rem 1rem;
     border-radius: 8px;
-    background: ${({ theme }) => theme['gray-800']};
+    background: ${({ theme }) => theme.colors.gray4};
     text-overflow: ellipsis;
   }
 `;
 
 export const ConfigurationListService = styled.div`
-  background: ${({ theme }) => theme['gray-700']};
+  background: ${({ theme }) => theme.colors.gray4};
   border-radius: 8px;
   margin-top: 0.7rem;
   padding: 1rem;
@@ -45,7 +46,7 @@ export const ConfigurationListService = styled.div`
 `;
 
 export const Action = styled.button`
-  background-color: ${(props) => props.theme['yellow-500']};
+  background-color: ${({ theme }) => theme.colors.gray9};
   border: none;
   border-radius: 8px;
   color: ${(props) => props.theme['gray-900']};
@@ -66,18 +67,18 @@ export const Action = styled.button`
     padding-top: 3px;
     width: 20px;
     height: 20px;
-    color: ${(props) => props.theme['gray-900']};
+    color: ${({ theme }) => theme.colors.gray10};
   }
 `;
 
 export const Span = styled.span`
-  color: ${(props) => props.theme['gray-900']};
+  color: ${({ theme }) => theme.colors.gray12};
   font-size: 1rem;
   line-height: 1.6rem;
 `;
 
 export const SpanCount = styled.span`
-  color: ${(props) => props.theme['gray-900']};
+  color: ${({ theme }) => theme.colors.gray12};
   font-size: 0.7rem;
   padding-top: 3px;
   margin-left: 2px;

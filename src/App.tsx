@@ -1,16 +1,17 @@
-import { ThemeProvider } from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
-import { defaultTheme } from './styles/themes/default';
-import { GlobalStyled } from './styles/global';
-import { Zoom } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { StyledToastContainer } from './styles/toast';
-import { Router } from './router';
 import { MessagesProvider } from './contexts/MessagesContext';
+import { Router } from './router';
+
+import { StyledToastContainer } from './styles/toast';
+import { Zoom } from 'react-toastify';
+import { GlobalStyled } from './styles/global';
+import 'react-toastify/dist/ReactToastify.css';
+import { CustomThemeProvider } from './contexts/CustomThemeContext';
 
 export function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <CustomThemeProvider>
+      {/* <ThemeProvider theme={themeMode}> */}
       <BrowserRouter>
         <MessagesProvider>
           <Router />
@@ -18,6 +19,7 @@ export function App() {
       </BrowserRouter>
       <StyledToastContainer transition={Zoom} />
       <GlobalStyled />
-    </ThemeProvider>
+      {/* </ThemeProvider> */}
+    </CustomThemeProvider>
   );
 }

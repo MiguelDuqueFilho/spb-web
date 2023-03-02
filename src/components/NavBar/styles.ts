@@ -4,7 +4,7 @@ export const NavbarContainer = styled.div`
   width: 100%;
 
   grid-area: Nav;
-  background: ${({ theme }) => theme['gray-800']};
+  background: ${({ theme }) => theme.colors.gray2};
 
   position: sticky;
   top: 0;
@@ -37,6 +37,41 @@ export const IconContainer = styled.div`
   cursor: pointer;
   margin-right: 10px;
   color: #555;
+
+  button {
+    all: unset;
+  }
+
+  .SwitchRoot {
+    width: 35px;
+    height: 20px;
+    background-color: ${({ theme }) => theme.colors.gray1};
+    border-radius: 9999px;
+    position: relative;
+    box-shadow: 0 2px 6px ${({ theme }) => theme.colors.gray11};
+    -webkit-tap-highlight-color: ${({ theme }) => theme.colors.gray6};
+  }
+  .SwitchRoot:focus {
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.gray10};
+  }
+  .SwitchRoot[data-state='checked'] {
+    background-color: ${({ theme }) => theme.colors.gray12};
+  }
+
+  .SwitchThumb {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: ${({ theme }) => theme.colors.gray10};
+    border-radius: 9999px;
+    box-shadow: 0 2px 2px ${({ theme }) => theme.colors.gray12};
+    transition: transform 100ms;
+    transform: translateX(2px);
+    will-change: transform;
+  }
+  .SwitchThumb[data-state='checked'] {
+    transform: translateX(19px);
+  }
 `;
 
 export const IconBadge = styled.span`
