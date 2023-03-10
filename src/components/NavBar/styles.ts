@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 export const NavbarContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
+  height: 42px;
 
   grid-area: Nav;
-  background: ${({ theme }) => theme.colors.gray2};
+  background: ${({ theme }) => theme.colors.gray3};
 
   position: sticky;
   top: 0;
@@ -22,7 +26,7 @@ export const NavbarWrapper = styled.div`
 export const Logo = styled.span`
   font-weight: bold;
   font-size: 30px;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.gray12};
   cursor: pointer;
 `;
 
@@ -30,48 +34,34 @@ export const TopLeft = styled.div``;
 export const TopRight = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const IconContainer = styled.div`
   position: relative;
   cursor: pointer;
   margin-right: 10px;
-  color: #555;
+  color: ${({ theme }) => theme.colors.gray12};
 
   button {
     all: unset;
   }
 
   .SwitchRoot {
-    width: 35px;
+    width: 36px;
     height: 20px;
-    background-color: ${({ theme }) => theme.colors.gray1};
+    background-color: ${({ theme }) => theme.colors.gray2};
     border-radius: 9999px;
     position: relative;
-    box-shadow: 0 2px 6px ${({ theme }) => theme.colors.gray11};
-    -webkit-tap-highlight-color: ${({ theme }) => theme.colors.gray6};
-  }
-  .SwitchRoot:focus {
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.gray10};
-  }
-  .SwitchRoot[data-state='checked'] {
-    background-color: ${({ theme }) => theme.colors.gray12};
-  }
+    border-style: solid;
+    border-width: 1px;
 
-  .SwitchThumb {
-    display: block;
-    width: 14px;
-    height: 14px;
-    background-color: ${({ theme }) => theme.colors.gray10};
-    border-radius: 9999px;
-    box-shadow: 0 2px 2px ${({ theme }) => theme.colors.gray12};
-    transition: transform 100ms;
-    transform: translateX(2px);
-    will-change: transform;
+    /* box-shadow: 0 2px 6px ${({ theme }) => theme.colors.gray3};
+    -webkit-tap-highlight-color: ${({ theme }) => theme.colors.gray3}; */
   }
-  .SwitchThumb[data-state='checked'] {
-    transform: translateX(19px);
-  }
+  /* .SwitchRoot:focus {
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.gray12};
+  } */
 `;
 
 export const IconBadge = styled.span`
@@ -80,8 +70,8 @@ export const IconBadge = styled.span`
   position: absolute;
   top: -5px;
   right: 0px;
-  background-color: yellow;
-  color: black;
+  background-color: ${({ theme }) => theme.colors.orange10};
+  color: ${({ theme }) => theme.colors.gray12};
   border-radius: 50%;
   display: flex;
   align-items: center;

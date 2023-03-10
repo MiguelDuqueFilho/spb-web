@@ -26,7 +26,7 @@ const SideBar = () => {
             <NavLink to="/" title="Home">
               <SidebarListItem>
                 <MyLineStyle />
-                Home
+                <span>Home</span>
               </SidebarListItem>
             </NavLink>
           </SidebarList>
@@ -37,25 +37,25 @@ const SideBar = () => {
             <NavLink to="/users" title="Users">
               <SidebarListItem>
                 <MyPermIdentity />
-                Users
+                <span>Users</span>
               </SidebarListItem>
             </NavLink>
             <NavLink to="/messages" title="Envio de mensagens SPB">
               <SidebarListItem>
                 <MyTimeline />
-                Messages
+                <span>Messages</span>
               </SidebarListItem>
             </NavLink>
             <NavLink to="/history" title="Histórico de mensages">
               <SidebarListItem>
                 <MyReceipt />
-                History
+                <span>History</span>
               </SidebarListItem>
             </NavLink>
             <NavLink to="/products" title="Products">
               <SidebarListItem>
                 <MyStorefront />
-                Products
+                <span>Products</span>
               </SidebarListItem>
             </NavLink>
           </SidebarList>
@@ -66,7 +66,7 @@ const SideBar = () => {
             <NavLink to="/configurations" title="Configuração">
               <SidebarListItem>
                 <MyWork />
-                Configurations
+                <span>Configurations</span>
               </SidebarListItem>
             </NavLink>
           </SidebarList>

@@ -3,27 +3,28 @@ import styled, { css } from 'styled-components';
 import {
   LineStyle,
   Timeline,
-  // TrendingUp,
   PermIdentity,
   Storefront,
-  // LocalAtm,
-  // Assessment,
-  // Drafts,
-  // Feedback,
-  // Forum,
   Work,
   Receipt,
-  // PieChart,
 } from '@material-ui/icons';
 
 export const SidebarContainer = styled.div`
   flex: 1;
   height: calc(100vh - 50px);
-  background: ${({ theme }) => theme['gray-800']};
+  background: ${({ theme }) => theme.colors.gray3};
   position: sticky;
   top: 50px;
-  width: 12em;
+  width: 13em;
+
+  @media (max-width: 768px) {
+    width: 2em;
+    span {
+      display: none;
+    }
+  }
 `;
+
 export const SidebarWrapper = styled.div`
   padding: 20px;
   color: #fff;
@@ -34,6 +35,10 @@ export const SidebarMenu = styled.div`
 export const SidebarTitle = styled.h3`
   font-size: 13px;
   color: #fff;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 export const SidebarList = styled.ul`
   list-style: none;

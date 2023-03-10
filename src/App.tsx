@@ -11,7 +11,6 @@ import { CustomThemeProvider } from './contexts/CustomThemeContext';
 export function App() {
   return (
     <CustomThemeProvider>
-      {/* <ThemeProvider theme={themeMode}> */}
       <BrowserRouter>
         <MessagesProvider>
           <Router />
@@ -19,7 +18,6 @@ export function App() {
       </BrowserRouter>
       <StyledToastContainer transition={Zoom} />
       <GlobalStyled />
-      {/* </ThemeProvider> */}
     </CustomThemeProvider>
   );
 }

@@ -8,15 +8,21 @@ import {
   TopLeft,
   TopRight,
 } from './styles';
-import * as Switch from '@radix-ui/react-switch';
 
-import { Language, NotificationsNone, Settings } from '@material-ui/icons';
+import {
+  WbSunnyOutlined,
+  NightsStayOutlined,
+  Language,
+  NotificationsNone,
+  Settings,
+} from '@material-ui/icons';
+
 import { useContext } from 'react';
 import { CustomThemeContext } from '../../contexts/CustomThemeContext';
 
 export function NavBar() {
-  const { themeToggler } = useContext(CustomThemeContext);
-  // const rndNmr = () => Math.floor(Math.random() * 99) + 1;
+  const { theme, themeToggler } = useContext(CustomThemeContext);
+
   return (
     <NavbarContainer>
       <NavbarWrapper>
@@ -35,10 +41,13 @@ export function NavBar() {
           <IconContainer>
             <Settings />
           </IconContainer>
-          <IconContainer>
-            <Switch.Root className="SwitchRoot" onClick={themeToggler}>
-              <Switch.Thumb className="SwitchThumb" />
-            </Switch.Root>
+          <IconContainer onClick={themeToggler}>
+            {theme === 'dark' ? <WbSunnyOutlined /> : <NightsStayOutlined />}
+            {/* <Switch.Root className="SwitchRoot" onClick={themeToggler}> */}
+
+            {/* <Switch.Thumb className="SwitchThumb" /> */}
+
+            {/* </Switch.Root> */}
           </IconContainer>
           <Avatar src={'https://github.com/MiguelDuqueFilho.png'} />
         </TopRight>

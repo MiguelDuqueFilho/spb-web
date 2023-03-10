@@ -3,11 +3,28 @@ import {
   blue,
   red,
   green,
+  orange,
   grayDark,
   blueDark,
   redDark,
   greenDark,
+  orangeDark,
 } from '@radix-ui/colors';
+
+//! ----------  Color use case ---------
+//* 1  - App background
+//* 2  - Subtle background
+//* 3  - UI element background
+//* 4  - Hovered UI element background
+//* 5  - Active / Selected UI element background
+//* 6  - Subtle borders and separators
+//* 7  - UI element border and focus rings
+//* 8  - Hovered UI element border
+//* 9  - Solid backgrounds
+//* 10 - Hovered solid backgrounds
+//* 11 - Low-contrast text
+//* 12 - High-contrast text
+//! --------------------------------------
 
 // Create your light Theme
 export const lightTheme = {
@@ -17,6 +34,7 @@ export const lightTheme = {
     ...blue,
     ...red,
     ...green,
+    ...orange,
   },
 
   white: '#FFF',
@@ -60,6 +78,7 @@ export const darkTheme = {
     ...blueDark,
     ...redDark,
     ...greenDark,
+    ...orangeDark,
   },
 
   white: '#FFF',
